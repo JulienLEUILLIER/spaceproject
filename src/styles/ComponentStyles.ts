@@ -47,8 +47,20 @@ const ComponentStyles = css`
     }
   }
 
+  .tabs-navigation {
+    --gap: 2rem;
+    button {
+      background-color: transparent;
+      border: none;
+      &[aria-selected="true"] {
+        color: hsl(var(--clr-white));
+      }
+    }
+  }
+
   .underline-indicators {
     > * {
+      cursor: pointer;
       position: relative;
       padding: var(--underline-gap, 1rem) 0;
 
@@ -61,10 +73,9 @@ const ComponentStyles = css`
         height: 0.1rem;
       }
 
-      :hover,
-      :focus {
+      :hover{
         ::after {
-          background-color: hsl(var(--clr-white) / .5);
+          background-color: hsl(var(--clr-white) / 0.5);
         }
       }
 
@@ -72,6 +83,41 @@ const ComponentStyles = css`
         ::after {
           background-color: hsl(var(--clr-white));
         }
+      }
+    }
+  }
+
+  .dots-list {
+    button {
+      border-radius: 50%;
+      border: 0;
+      cursor: pointer;
+      aspect-ratio: 1;
+      padding: 0.5rem;
+      background-color: hsl(var(--clr-white) / 0.25);
+
+      :hover,
+      :focus {
+        background-color: hsl(var(--clr-white) / 0.5);
+      }
+
+      &.active {
+        background-color: hsl(var(--clr-white));
+      }
+    }
+  }
+
+  .small-button {
+    flex-direction: column;
+
+    button {
+      aspect-ratio: 1;
+      border-radius: 50%;
+      padding: 0 1.5rem;
+      border: 1px solid hsl(var(--clr-white) /0.25);
+
+      :hover {
+        border: 1px solid hsl(var(--clr-white));
       }
     }
   }
