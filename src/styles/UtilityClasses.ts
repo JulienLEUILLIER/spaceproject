@@ -23,6 +23,20 @@ const UtilityClasses = css`
         max-width: 80rem;
     }
 
+    .grid-container {
+        display: grid;
+        column-gap: var(--container-gap, 2rem);
+        grid-template-columns: minmax(2em, 1fr) repeat(2, minmax(0em, 40rem)) minmax(2em, 1fr);
+    }
+
+    .grid-container > *:first-child {
+        grid-column: 2;
+    }
+
+    .grid-container > *:last-child {
+        grid-column: 3;
+    }
+
     .sr-only {
         position: absolute;
         width: 1px;

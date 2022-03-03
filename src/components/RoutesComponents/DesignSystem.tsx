@@ -1,7 +1,7 @@
 import React from 'react'
-import Colors from './Colors'
-import InteractiveElements from './InteractiveElements'
-import Typography from './Typography'
+import Colors from '../DesignSystem/Colors'
+import InteractiveElements from '../DesignSystem/InteractiveElements'
+import Typography from '../DesignSystem/Typography'
 
 const DesignSystem = () => {
   return (

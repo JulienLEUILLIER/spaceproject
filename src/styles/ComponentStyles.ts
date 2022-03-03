@@ -6,7 +6,7 @@ const ComponentStyles = css`
     z-index: 1;
     border-radius: 50%;
     padding: 0 2em;
-    display: grid;
+    display: inline-grid;
     aspect-ratio: 1;
     text-decoration: none;
     place-items: center;
