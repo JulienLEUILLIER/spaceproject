@@ -3,7 +3,7 @@ import Navigation from './Navigation'
 
 const Header = () => {
 
-  const headings = ['Home', 'Destination', 'Crew', 'Technology'];
+  const headings: Readonly<string[]> = ['Home', 'Destination', 'Crew', 'Technology'];
 
   return (
     <header className='primary-header flex'>

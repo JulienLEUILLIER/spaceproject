@@ -1,11 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-interface NavigationProps {
-    headings: string[];
+export type HeadingProps = {
+    headings: Readonly<string[]>
 }
 
-const Navigation = ({headings}: NavigationProps) => {
+const Navigation = ({headings}: HeadingProps) => {
     
     return (
         <nav>
