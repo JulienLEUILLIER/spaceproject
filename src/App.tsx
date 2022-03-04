@@ -1,10 +1,10 @@
 import { Route, Routes } from 'react-router-dom';
-import Home from './components/RoutesComponents/Home';
-import DesignSystem from './components/RoutesComponents/DesignSystem';
+import Home from './components/Home/Home';
+import DesignSystem from './components/DesignSystem';
 import GlobalStyle from './styles/global';
-import Destination from './components/RoutesComponents/Destination';
-import Crew from './components/RoutesComponents/Crew';
-import Technology from './components/RoutesComponents/Technology';
+import Destination from './components/Destination';
+import Crew from './components/Crew';
+import Technology from './components/Technology';
 
 function App() {
   return (

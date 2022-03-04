@@ -24,9 +24,14 @@ const UtilityClasses = css`
     }
 
     .grid-container {
+        border: 5px solid magenta;
         display: grid;
         column-gap: var(--container-gap, 2rem);
         grid-template-columns: minmax(2em, 1fr) repeat(2, minmax(0em, 40rem)) minmax(2em, 1fr);
+
+        > div {
+            border: 3px solid yellowgreen;
+        }
     }
 
     .grid-container > *:first-child {

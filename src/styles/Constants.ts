@@ -1,7 +1,6 @@
 import { css } from "styled-components";
 
 const Constants = css`
-    @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Barlow:wght@400;700&family=Bellefair&display=swap');
 
     :root {
         /* Colors */
@@ -21,7 +20,7 @@ const Constants = css`
         --fs-200: 0.875rem;
 
         /* Font families */
-        --ff-serif: 'Bellefair', --ff-serif;
+        --ff-serif: 'Bellefair';
         --ff-sans-cond: 'Barlow Condensed', sans-serif;
         --ff-sans-normal: "Barlow", sans-serif;
     }
