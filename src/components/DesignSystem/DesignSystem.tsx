@@ -5,7 +5,7 @@ import Typography from './Typography'
 
 const DesignSystem = () => {
   return (
-    <div className='container bg-dark text-white'>
+    <div style={{paddingBottom: '20vh'}} className='container bg-dark text-white'>
         <h1 className='ff-serif'>Design System</h1>
         <Colors />
         <Typography />
