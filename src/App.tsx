@@ -12,11 +12,30 @@ function App() {
     <div className="bg-dark">
       <GlobalStyle />
       <Routes>
-        <Route path="/" element={<Global content={<Home/>} />} />
-        <Route path="/design-system" element={<DesignSystem/>} />
-        <Route path="/destination" element={<Global content={<Destination/>} />}/>
-        <Route path="/crew" element={<Global content={<Crew/>} />}/>
-        <Route path="/technology" element={<Global content={<Technology/>} />}/>
+        <Route
+          path="/"
+          element={<Global
+            routeComponent={<Home />}
+            backgroundImage='assets/home/background-home-desktop.jpg' />}
+        />
+        <Route path="/design-system" element={<DesignSystem />} />
+        <Route
+          path="/destination"
+          element={<Global
+            routeComponent={<Destination />}
+            backgroundImage='assets/destination/background-destination-desktop.jpg' />} />
+        <Route
+          path="/crew"
+          element={<Global
+            routeComponent={<Crew />}
+            backgroundImage='assets/crew/background-crew-desktop.jpg'
+          />} />
+        <Route
+          path="/technology"
+          element={<Global
+            routeComponent={<Technology />}
+            backgroundImage='assets/technology/background-technology-desktop.jpg'
+          />} />
       </Routes>
     </div>
   );

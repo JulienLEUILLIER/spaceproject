@@ -2,14 +2,15 @@ import Header from "../Header/Header";
 import Wrapper from "./Global.styles"
 
 interface GlobalProps {
-    content: JSX.Element;
+    routeComponent: JSX.Element;
+    backgroundImage: string;
 }
 
-const Global = ({content}: GlobalProps) => {
+const Global = ({routeComponent, backgroundImage}: GlobalProps) => {
   return (
-    <Wrapper>
+    <Wrapper backgroundImage={backgroundImage}>
       <Header />
-      {content}
+      {routeComponent}
     </Wrapper>
   )
 }
