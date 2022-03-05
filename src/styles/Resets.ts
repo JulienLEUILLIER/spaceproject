@@ -17,15 +17,6 @@ const Resets = css`
         font-weight: 400;
     }
 
-    body {
-        line-height: 1.5;
-        min-height: 100vh;
-        font-family: var(--ff-sans-normal);
-        font-size: var(--fs-400);
-        color: hsl(var(--clr-white));
-        background-color: hsl(var(--clr-dark));
-    }
-
     img, picture {
         max-width: 100%;
         display: block;

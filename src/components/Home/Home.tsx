@@ -1,15 +1,11 @@
-import React from 'react'
-import Header from '../Header/Header'
 import MainContentComponent from '../MainContent/MainContentComponent'
-import Wrapper from './Home.styles'
+import HomeText from './HomeText'
+import LargeButton from './LargeButton'
 
 const Home = () => {
   return (
-    <Wrapper>
-      <Header />
-      <MainContentComponent />
-    </Wrapper>
+      <MainContentComponent leftComponent={<HomeText />} rightComponent={<LargeButton />}/>
   )
 }
 
-export default Home
+export default Home;
