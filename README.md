@@ -1,3 +1,3 @@
 # Setup Project
 
-README needs updating
+Based on Frontendmentor project, but in a React/TypeScript/Styled-Components environment.

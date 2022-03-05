@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Global from "./Global";
 
 const Wrapper = styled.div<{backgroundImage: string}>`
   line-height: 1.5;
@@ -10,7 +9,6 @@ const Wrapper = styled.div<{backgroundImage: string}>`
   display: grid;
   grid-template-rows: min-content 1fr;
   background-image: ${props => `url(${props.backgroundImage})`};
-
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
