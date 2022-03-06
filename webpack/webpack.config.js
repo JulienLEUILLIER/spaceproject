@@ -6,7 +6,6 @@ module.exports = {
     resolve: {
       extensions: ['.tsx', '.ts', '.js'],
     },
-    mode: 'development',
     module: {
       rules: [
         {
@@ -42,7 +41,8 @@ module.exports = {
         })
     ],
     devServer: {
-      hot: true
+      hot: true,
+      port: 3000,
     },
     stats: 'errors-only',
   }

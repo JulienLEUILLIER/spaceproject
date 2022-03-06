@@ -6,18 +6,13 @@ import Destination from './components/Destination';
 import Crew from './components/Crew';
 import Technology from './components/Technology';
 import Global from './components/Global/Global';
+import HomeBackground from './components/Home/background-home-desktop.jpg';
 
 function App() {
   return (
     <div className="bg-dark">
       <GlobalStyle />
       <Routes>
-        <Route
-          path="/"
-          element={<Global
-            routeComponent={<Home />}
-            backgroundImage='assets/home/background-home-desktop.jpg' />}
-        />
         <Route path="/design-system" element={<DesignSystem />} />
         <Route
           path="/destination"
@@ -36,6 +31,12 @@ function App() {
             routeComponent={<Technology />}
             backgroundImage='assets/technology/background-technology-desktop.jpg'
           />} />
+        <Route
+          path="/"
+          element={<Global
+            routeComponent={<Home />}
+            backgroundImage={HomeBackground} />}
+        />
       </Routes>
     </div>
   );
