@@ -2,11 +2,11 @@ import { Route, Routes } from 'react-router-dom';
 import Home from './components/Home/Home';
 import DesignSystem from './components/DesignSystem/DesignSystem';
 import GlobalStyle from './styles/global';
-import Destination from './components/Destination';
-import Crew from './components/Crew';
-import Technology from './components/Technology';
+import Destination from './components/Destination/Destination';
+import Crew from './components/Crew/Crew';
+import Technology from './components/Technology/Technology';
 import Global from './components/Global/Global';
-import HomeBackground from './components/Home/background-home-desktop.jpg';
+import desktopImages from './helpers/images';
 
 function App() {
   return (
@@ -18,24 +18,24 @@ function App() {
           path="/destination"
           element={<Global
             routeComponent={<Destination />}
-            backgroundImage='assets/destination/background-destination-desktop.jpg' />} />
+            backgroundImage={desktopImages.destination} />} />
         <Route
           path="/crew"
           element={<Global
             routeComponent={<Crew />}
-            backgroundImage='assets/crew/background-crew-desktop.jpg'
+            backgroundImage={desktopImages.crew}
           />} />
         <Route
           path="/technology"
           element={<Global
             routeComponent={<Technology />}
-            backgroundImage='assets/technology/background-technology-desktop.jpg'
+            backgroundImage={desktopImages.technology}
           />} />
         <Route
           path="/"
           element={<Global
             routeComponent={<Home />}
-            backgroundImage={HomeBackground} />}
+            backgroundImage={desktopImages.home} />}
         />
       </Routes>
     </div>
