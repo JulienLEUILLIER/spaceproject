@@ -40,9 +40,5 @@ module.exports = {
           template: path.resolve(__dirname, '..', './src/index.html')
         })
     ],
-    devServer: {
-      hot: true,
-      port: 3000,
-    },
-    stats: 'errors-only',
+    
   }
