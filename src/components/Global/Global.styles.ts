@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ImagesProps } from "../../helpers/useImage";
+import { ImagesProps } from "../../hooks/useImage";
 
 const Wrapper = styled.div<{backgrounds: ImagesProps}>`
   line-height: 1.5;

@@ -1,7 +1,6 @@
 import Header from "../Header/Header";
 import Wrapper from "./Global.styles";
-import { useState } from "react";
-import useImage from '../../helpers/useImage';
+import useImage from '../../hooks/useImage';
 
 interface GlobalProps {
   routeComponent: JSX.Element;
