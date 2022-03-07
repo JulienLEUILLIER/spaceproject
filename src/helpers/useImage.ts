@@ -10,25 +10,30 @@ const useImage = (routeComponent: JSX.Element) => {
 
   const routeName = routeComponent.type.name.toLowerCase();
 
+  const initialState: ImagesProps = {
+      desktop: '',
+      tablet: '',
+      mobile : '',
+  } 
+
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<any>();
-  const [image, setImage] = useState('')
+  const [images, setImages] = useState<ImagesProps>(initialState);
 
   useEffect(() => {
     const fetchImage = async () => {
       const response =
-        await require(`../../public/assets/${routeName}/background-${routeName}-desktop.jpg`);
-
-      setImage(response);
+      {
+        desktop: await require(`../../public/assets/${routeName}/background-${routeName}-desktop.jpg`),
+        tablet: await require(`../../public/assets/${routeName}/background-${routeName}-tablet.jpg`),
+        mobile: await require(`../../public/assets/${routeName}/background-${routeName}-mobile.jpg`),
+      }
+      setImages(response);
     };
     fetchImage();
   }, [routeComponent]);
 
-  return {
-    desktop: image,
-    tablet: "",
-    mobile: "",
-  };
+  return images;
 };
 
 export default useImage;

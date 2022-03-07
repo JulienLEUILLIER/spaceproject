@@ -14,6 +14,11 @@ const Wrapper = styled.div<{backgrounds: ImagesProps}>`
   background-position: center center;
   background-repeat: no-repeat;
 
+
+  @media (max-width: 800px) {
+    background-image: ${props => `url(${props.backgrounds.tablet})`};
+  }
+
   @media (max-width: 500px) {
     background-image: ${props => `url(${props.backgrounds.mobile})`};
   }
