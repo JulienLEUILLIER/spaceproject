@@ -6,7 +6,6 @@ import Destination from './components/Destination/Destination';
 import Crew from './components/Crew/Crew';
 import Technology from './components/Technology/Technology';
 import Global from './components/Global/Global';
-import desktopImages from './helpers/images';
 
 function App() {
   return (
@@ -18,24 +17,26 @@ function App() {
           path="/destination"
           element={<Global
             routeComponent={<Destination />}
-            backgroundImage={desktopImages.destination} />} />
+            //backgroundImage={desktopImages.destination} 
+            />} />
         <Route
           path="/crew"
           element={<Global
             routeComponent={<Crew />}
-            backgroundImage={desktopImages.crew}
+            // backgroundImage={desktopImages.crew}
           />} />
         <Route
           path="/technology"
           element={<Global
             routeComponent={<Technology />}
-            backgroundImage={desktopImages.technology}
+            // backgroundImage={desktopImages.technology}
           />} />
         <Route
           path="/"
           element={<Global
             routeComponent={<Home />}
-            backgroundImage={desktopImages.home} />}
+            // backgroundImage={desktopImages.home} 
+            />}
         />
       </Routes>
     </div>
