@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { ImagesProps } from "../../hooks/useImage";
+import { BackgroundsProps } from "../../hooks/useImage";
 
-const Wrapper = styled.div<{backgrounds: ImagesProps}>`
+const Wrapper = styled.div<{backgrounds: BackgroundsProps}>`
   line-height: 1.5;
   min-height: 100vh;
   font-size: var(--fs-400);
