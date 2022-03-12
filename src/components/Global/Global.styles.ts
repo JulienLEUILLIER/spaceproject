@@ -3,7 +3,6 @@ import { BackgroundsProps } from "../../hooks/useImage";
 
 const Wrapper = styled.div<{backgrounds: BackgroundsProps}>`
   line-height: 1.5;
-  min-height: 100vh;
   font-size: var(--fs-400);
   color: hsl(var(--clr-white));
   background-color: hsl(var(--clr-dark));
@@ -15,11 +14,11 @@ const Wrapper = styled.div<{backgrounds: BackgroundsProps}>`
   background-repeat: no-repeat;
 
 
-  @media (max-width: 800px) {
+  @media (max-width: 45em) {
     background-image: ${props => `url(${props.backgrounds.tablet})`};
   }
 
-  @media (max-width: 500px) {
+  @media (max-width: 35em) {
     background-image: ${props => `url(${props.backgrounds.mobile})`};
   }
 `;

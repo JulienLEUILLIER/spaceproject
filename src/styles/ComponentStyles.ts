@@ -4,6 +4,7 @@ const ComponentStyles = css`
   .large-button {
     position: relative;
     z-index: 1;
+    font-size: 2rem;
     border-radius: 50%;
     padding: 0 2em;
     display: inline-grid;

@@ -7,7 +7,7 @@ interface MainContentComponentProps {
 
 const MainContentComponent = ({leftComponent, rightComponent}: MainContentComponentProps) => {
     return (
-        <Wrapper>
+        <Wrapper className="container">
             {leftComponent}
             {rightComponent}
         </Wrapper>

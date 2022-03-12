@@ -11,6 +11,10 @@ const UtilityClasses = css`
         gap: var(--gap);
     }
 
+    .d-block {
+        display: block;
+    }
+
     .flow {
         > :where(:not(:first-child)) {
             margin-top: var(--flow-space, 1rem);
@@ -20,7 +24,7 @@ const UtilityClasses = css`
     .container {
         padding-inline: 2em;
         margin-inline: auto;
-        max-width: 80rem;
+        max-width: 60rem;
     }
 
     .sr-only {

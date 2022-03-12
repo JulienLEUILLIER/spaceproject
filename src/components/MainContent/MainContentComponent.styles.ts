@@ -3,17 +3,18 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   border: 5px solid magenta;
   display: grid;
+  min-height: 100vh;
+  text-align: center;
 
-  > div {
+  > * {
     border: 3px solid yellowgreen;
+    max-width: 50ch;
   }
 
   @media (min-width: 45rem) {
     column-gap: var(--container-gap, 2rem);
-    grid-template-columns: minmax(2em, 1fr) repeat(2, minmax(0em, 40rem)) minmax(
-        2em,
-        1fr
-      );
+    grid-template-columns: minmax(2em, 1fr) repeat(2, minmax(0em, 40rem)) minmax(2em, 1fr);
+    text-align: left;
 
     > *:first-child {
       grid-column: 2;

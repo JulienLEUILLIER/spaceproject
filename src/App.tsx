@@ -15,29 +15,20 @@ function App() {
         <Route path="/design-system" element={<DesignSystem />} />
         <Route
           path="/destination"
-          element={<Global
-            routeComponent={<Destination />}
-            //backgroundImage={desktopImages.destination} 
-            />} />
+          element={<Global routeComponent={<Destination />}
+        />} />
         <Route
           path="/crew"
-          element={<Global
-            routeComponent={<Crew />}
-            // backgroundImage={desktopImages.crew}
-          />} />
+          element={<Global routeComponent={<Crew />} 
+        />} />
         <Route
           path="/technology"
-          element={<Global
-            routeComponent={<Technology />}
-            // backgroundImage={desktopImages.technology}
-          />} />
+          element={<Global routeComponent={<Technology />} 
+        />} />
         <Route
           path="/"
-          element={<Global
-            routeComponent={<Home />}
-            // backgroundImage={desktopImages.home} 
-            />}
-        />
+          element={<Global routeComponent={<Home />} 
+        />} />
       </Routes>
     </div>
   );
