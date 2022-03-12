@@ -12,6 +12,7 @@ const Global = ({ routeComponent }: GlobalProps) => {
 
   return (
     <Wrapper backgrounds={backgrounds}>
+      <Header />
       {routeComponent}
     </Wrapper>
   )

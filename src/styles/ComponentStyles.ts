@@ -32,7 +32,6 @@ const ComponentStyles = css`
   }
 
   .primary-navigation {
-    --gap: 8rem;
     --underline-gap: 2rem;
     list-style: none;
     padding: 0;
@@ -71,7 +70,7 @@ const ComponentStyles = css`
         left: 0;
         right: 0;
         bottom: 0;
-        height: 0.1rem;
+        height: 0.2rem;
       }
 
       :hover{

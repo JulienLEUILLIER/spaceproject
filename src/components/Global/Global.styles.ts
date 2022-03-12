@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { BackgroundsProps } from "../../hooks/useImage";
 
 const Wrapper = styled.div<{backgrounds: BackgroundsProps}>`
+  min-height: 100vh;
   line-height: 1.5;
   font-size: var(--fs-400);
   color: hsl(var(--clr-white));

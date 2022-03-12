@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   border: 5px solid magenta;
   display: grid;
-  min-height: 100vh;
   text-align: center;
   place-items: center;
   padding-inline: 1rem;
