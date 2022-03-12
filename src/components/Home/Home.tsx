@@ -4,7 +4,7 @@ import LargeButton from './LargeButton'
 
 const Home = () => {
   return (
-      <MainContentComponent leftComponent={<HomeText />} rightComponent={<LargeButton />}/>
+      <MainContentComponent className={'grid-container--home'} leftComponent={<HomeText />} rightComponent={<LargeButton />}/>
   )
 }
 

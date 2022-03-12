@@ -5,10 +5,17 @@ export const Wrapper = styled.div`
   display: grid;
   min-height: 100vh;
   text-align: center;
+  place-items: center;
+  padding-inline: 1rem;
 
   > * {
     border: 3px solid yellowgreen;
     max-width: 50ch;
+  }
+
+  &.grid-container--home {
+    padding-bottom: max(6rem, 10vh);
+    align-items: end;
   }
 
   @media (min-width: 45rem) {

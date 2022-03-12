@@ -33,6 +33,7 @@ const useImage = (routeComponent: JSX.Element) => {
         for(const view of possibleViews) {
           currentBackgrounds[`${view}`] = (await import(`../components/${routeName}/images/background-${routeName.toLowerCase()}-${view}.jpg`)).default;
         }
+        
         setImages(currentBackgrounds);
 
       } catch(error) {
