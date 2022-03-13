@@ -1,14 +1,12 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  border: 5px solid magenta;
   display: grid;
   text-align: center;
   place-items: center;
   padding-inline: 1rem;
 
   > * {
-    border: 3px solid yellowgreen;
     max-width: 50ch;
   }
 

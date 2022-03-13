@@ -1,21 +1,24 @@
 import Navigation from './Navigation'
-import HeaderWrapper from './Header.styles';
+import { HamburgerButton } from './Header.styles';
+import { useState } from 'react';
 
 const Header = () => {
+
+  const [toggle, setToggle] = useState(false);
 
   const headings = ['Home', 'Destination', 'Crew', 'Technology'];
 
   return (
-    <HeaderWrapper className='flex'>
+    <div className='flex'>
 
       <div>
-        <img src={'assets/shared/logo.svg'} alt="Logo" className='logo'/>
+        <img src={'assets/shared/logo.svg'} alt="Logo" className='logo' />
       </div>
-      <button aria-controls='primary-navigation'><span className='sr-only' aria-expanded='false'>Menu</span></button>
+      <HamburgerButton onClick={() => setToggle(prev => !prev)} aria-controls='primary-navigation'><span className='sr-only' aria-expanded='false'>Menu</span></HamburgerButton>
       <div>
-        <Navigation headings={headings}/>
+        <Navigation headings={headings} toggle={toggle} />
       </div>
-    </HeaderWrapper>
+    </div>
   )
 }
 
