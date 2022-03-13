@@ -9,8 +9,8 @@ interface NavigationProps {
 const Navigation = ({ headings, toggle }: NavigationProps) => {
 
     return (
-        <NavigatorWrapper>
-            <ul id="primary-navigation" data-visible={toggle} className="underline-indicators">
+        <NavigatorWrapper toggle={toggle}>
+            <ul id="primary-navigation" className="underline-indicators">
                 <li className='active'><Link to={'/'} className="ff-sans-cond uppercase text-white letter-spacing-2"><span>00</span>{headings[0]}</Link></li>
                 <li><Link to={'/destination'} className="ff-sans-cond uppercase text-white letter-spacing-2"><span>01</span>{headings[1]}</Link></li>
                 <li><Link to={'/crew'} className="ff-sans-cond uppercase text-white letter-spacing-2"><span>02</span>{headings[2]}</Link></li>

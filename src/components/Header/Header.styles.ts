@@ -19,7 +19,7 @@ export const HamburgerButton = styled.button`
     }
 `;
 
-export const NavigatorWrapper = styled.nav`
+export const NavigatorWrapper = styled.nav<{toggle: boolean}>`
   ul {
     display: flex;
     --underline-gap: 2rem;
@@ -50,12 +50,8 @@ export const NavigatorWrapper = styled.nav`
       padding: min(20rem, 10vh) 2rem;
       margin: 0;
       flex-direction: column;
-      transform: translateX(100%);
+      transform: ${props => props.toggle ? 'translateX(0%)' : 'translateX(100%)'};
       transition: transform ease-in-out 300ms;
-
-      &[data-visible='true'] {
-          transform: translateX(0%);
-      }
 
       > .active::after {
         height: 0;
