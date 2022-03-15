@@ -1,5 +1,5 @@
 import Navigation from './Navigation'
-import { HamburgerButton } from './Header.styles';
+import { HamburgerButton, Logo } from './Header.styles';
 import { useState } from 'react';
 
 const Header = () => {
@@ -11,10 +11,10 @@ const Header = () => {
   return (
     <div className='flex'>
 
-      <div>
+      <Logo>
         <img src={'assets/shared/logo.svg'} alt="Logo" className='logo' />
-      </div>
-      <HamburgerButton onClick={() => setToggle(prev => !prev)} aria-controls='primary-navigation'><span className='sr-only' aria-expanded='false'>Menu</span></HamburgerButton>
+      </Logo>
+      <HamburgerButton toggle={toggle} onClick={() => setToggle(prev => !prev)} aria-controls='primary-navigation'><span className='sr-only' aria-expanded={toggle}>Menu</span></HamburgerButton>
       <div>
         <Navigation headings={headings} toggle={toggle} />
       </div>
