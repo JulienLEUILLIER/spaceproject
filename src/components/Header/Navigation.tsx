@@ -1,21 +1,49 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom'
 import { NavigatorWrapper } from './Header.styles';
+import { MainSection } from './Header';
+import ListItem from './ListItem';
 
 interface NavigationProps {
-    headings: string[];
     toggle: boolean
 }
 
-const Navigation = ({ headings, toggle }: NavigationProps) => {
+const Navigation = ({ toggle }: NavigationProps) => {
+
+    const [activePage, setActivePage] = useState<MainSection>('');
+
+    let counter = 0;
 
     return (
         <NavigatorWrapper toggle={toggle}>
             <ul id="primary-navigation" className="underline-indicators">
-                <li className='active'><Link to={'/'} className="ff-sans-cond uppercase text-white letter-spacing-2"><span>00</span>{headings[0]}</Link></li>
-                <li><Link to={'/destination'} className="ff-sans-cond uppercase text-white letter-spacing-2"><span>01</span>{headings[1]}</Link></li>
-                <li><Link to={'/crew'} className="ff-sans-cond uppercase text-white letter-spacing-2"><span>02</span>{headings[2]}</Link></li>
-                {headings[3] && <li><Link to={'/technology'} className="ff-sans-cond uppercase text-white letter-spacing-2"><span>03</span>{headings[3]}</Link></li>}
+                <ListItem
+                    routeName=''
+                    activePage={activePage}
+                    setActivePage={setActivePage}
+                    counter={counter++}
+                />
 
+                <ListItem
+                    routeName='destination'
+                    activePage={activePage}
+                    setActivePage={setActivePage}
+                    counter={counter++}
+                />
+
+                <ListItem
+                    routeName='crew'
+                    activePage={activePage}
+                    setActivePage={setActivePage}
+                    counter={counter++}
+                />
+
+                <ListItem
+                    routeName='technology'
+                    activePage={activePage}
+                    setActivePage={setActivePage}
+                    counter={counter++}
+                />
             </ul>
         </NavigatorWrapper>
     )

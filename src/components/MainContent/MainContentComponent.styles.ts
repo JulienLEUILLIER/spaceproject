@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.main`
   display: grid;
   text-align: center;
   place-items: center;

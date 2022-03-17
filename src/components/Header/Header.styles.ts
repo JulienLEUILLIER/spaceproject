@@ -1,5 +1,24 @@
 import styled from "styled-components";
 
+export const Wrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (min-width: 45rem) {
+    &::after {
+      content: "";
+      display: block;
+      position: relative;
+      height: 1px;
+      width: 100%;
+      background: hsl(var(--clr-white));
+      margin-right: -2.5rem;
+      order: 1;
+    }
+  }
+`;
+
 export const HamburgerButton = styled.button<{ toggle: boolean }>`
   display: none;
   cursor: pointer;
@@ -23,33 +42,20 @@ export const HamburgerButton = styled.button<{ toggle: boolean }>`
 `;
 
 export const NavigatorWrapper = styled.nav<{ toggle: boolean }>`
+  order: 2;
+
   ul {
-    border: 5px solid magenta;
     display: flex;
+    gap: clamp(1.5rem, 5vw, 3.5rem);
     --underline-gap: 2rem;
     list-style: none;
-    margin-inline: 2rem;
-    padding: 0;
     background: hsl(var(--clr-dark) / 0.95);
 
-    li:not(:first-child) {
-      margin-inline-start: 1.2rem;
-
-      @media (min-width: 45rem) {
-        margin-inline-start: 2rem;
-      }
+    @media (min-width: 35rem) {
+      padding-inline: clamp(3rem, 7vw, 7rem);
     }
-  }
 
-  @supports (backdrop-filter: blur(1rem)) {
-    ul {
-      background: hsl(var(--clr-white) / 0.05);
-      backdrop-filter: blur(3rem);
-    }
-  }
-
-  @media (max-width: 35rem) {
-    ul {
+    @media (max-width: 35rem) {
       position: fixed;
       z-index: 999;
       --underline-gap: 1rem;
@@ -65,6 +71,19 @@ export const NavigatorWrapper = styled.nav<{ toggle: boolean }>`
         height: 0;
       }
     }
+
+    @media (min-width: 35rem) and (max-width: 44.999rem) {
+      span {
+        display: none;
+      }
+    }
+  }
+
+  @supports (backdrop-filter: blur(1rem)) {
+    ul {
+      background: hsl(var(--clr-white) / 0.05);
+      backdrop-filter: blur(2rem);
+    }
   }
 
   a {
@@ -78,7 +97,9 @@ export const NavigatorWrapper = styled.nav<{ toggle: boolean }>`
 `;
 
 export const Logo = styled.div`
+  padding-inline-end: clamp(1.5rem, 7vw, 3.5rem);
+
   img {
-    margin: 1.5rem clamp(1.5rem, 5vw, 3.5rem);
+    margin: 1.5rem clamp(1.5rem, 7vw, 3.5rem);
   }
 `;
