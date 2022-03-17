@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 
-type PossibleViews = 'desktop' | 'tablet' | 'mobile'
+type PossibleViews = "desktop" | "tablet" | "mobile";
 
-export type BackgroundsProps = {[k in PossibleViews]: string}
+export type BackgroundsProps = { [k in PossibleViews]: string };
 
 const initialState: BackgroundsProps = {
   desktop: "",
@@ -11,7 +11,6 @@ const initialState: BackgroundsProps = {
 };
 
 const useImage = (routeComponent: JSX.Element) => {
-  
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<unknown>();
   const [images, setImages] = useState<BackgroundsProps>(initialState);
@@ -21,31 +20,32 @@ const useImage = (routeComponent: JSX.Element) => {
   useEffect(() => {
     const fetchImage = async () => {
       try {
-
         const currentBackgrounds: BackgroundsProps = {
           desktop: "",
           tablet: "",
           mobile: "",
+        };
+
+        const possibleViews: PossibleViews[] = ["desktop", "tablet", "mobile"];
+
+        for (const view of possibleViews) {
+          currentBackgrounds[`${view}`] = (
+            await import(
+              /* webpackMode: "lazy" */
+              `../components/${routeName}/images/background-${routeName.toLowerCase()}-${view}.jpg`
+            )
+          ).default;
         }
-  
-        const possibleViews: PossibleViews[] = ['desktop', 'tablet', 'mobile'];
-  
-        for(const view of possibleViews) {
-          currentBackgrounds[`${view}`] = (await import(`../components/${routeName}/images/background-${routeName.toLowerCase()}-${view}.jpg`)).default;
-        }
-        
+
         setImages(currentBackgrounds);
-
-      } catch(error) {
+      } catch (error) {
         setError(error);
-
       } finally {
         setLoading(false);
       }
     };
 
     fetchImage();
-    
   }, [routeComponent]);
 
   return images;

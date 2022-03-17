@@ -13,7 +13,7 @@ const InteractiveElements = () => {
         
         {/* Navigation */}
         <div>
-          <Navigation headings={headings}/>
+          <Navigation toggle={true}/>
         </div>
 
 
