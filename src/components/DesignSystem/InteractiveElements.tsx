@@ -12,9 +12,9 @@ const InteractiveElements = () => {
         <h2 className='numbered-title'><span>03</span>Interactive Elements</h2>
         
         {/* Navigation */}
-        <div>
+        {/* <div>
           <Navigation headings={headings}/>
-        </div>
+        </div> */}
 
 
         <div className='flex'>
