@@ -5,16 +5,9 @@ import Logo from './icons/logo.svg';
 import HamburgerOpen from './icons/icon-hamburger.svg';
 import HamburgerClose from './icons/icon-close.svg';
 
-export type MainSection = '' | 'home' | 'destination' | 'crew' | 'technology';
-
 const Header = () => {
 
   const [toggle, setToggle] = useState(false);
-
-  const hamburgers = {
-    open: HamburgerOpen,
-    close: HamburgerClose,
-  }  
 
   return (
     <Wrapper>

@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react";
+import { PossibleViews, BackgroundsProps } from "../helpers/getBackgrounds";
 
-type PossibleViews = "desktop" | "tablet" | "mobile";
-
-export type BackgroundsProps = { [k in PossibleViews]: string };
 
 const initialState: BackgroundsProps = {
   desktop: "",

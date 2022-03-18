@@ -3,7 +3,7 @@ import destinationBackgrounds from '../components/Destination/destinationBackgro
 import homeBackgrounds from '../components/Home/homeBackgrounds'; 
 import technologyBackgrounds from '../components/Technology/technologyBackgrounds';
 
-type PossibleViews = "desktop" | "tablet" | "mobile";
+export type PossibleViews = "desktop" | "tablet" | "mobile";
 
 export type BackgroundsProps = { [k in PossibleViews]: string };
 
