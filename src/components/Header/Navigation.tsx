@@ -20,44 +20,40 @@ const Navigation = ({ toggle }: NavigationProps) => {
             <ul id="primary-navigation" className="underline-indicators">
             <Link
                 to={`/`}
-                className="ff-sans-cond uppercase text-white letter-spacing-2"
+                className={activePage === '' ? 'active' : ''}
                 onClick={() => setActivePage('')}>
                 <ListItem
                     routeName=''
-                    activePage={activePage}
                     counter={counter++}
                 />
             </Link>
 
             <Link
                 to={`/destination`}
-                className="ff-sans-cond uppercase text-white letter-spacing-2"
-                onClick={() => setActivePage('')}>
+                className={activePage === 'destination' ? 'active' : ''}
+                onClick={() => setActivePage('destination')}>
                 <ListItem
                     routeName='destination'
-                    activePage={activePage}
                     counter={counter++}
                 />
             </Link>
 
             <Link
                 to={`/crew`}
-                className="ff-sans-cond uppercase text-white letter-spacing-2"
-                onClick={() => setActivePage('')}>
+                className={activePage === 'crew' ? 'active' : ''}
+                onClick={() => setActivePage('crew')}>
                 <ListItem
                     routeName='crew'
-                    activePage={activePage}
                     counter={counter++}
                 />
             </Link>
 
             <Link
                 to={`/technology`}
-                className="ff-sans-cond uppercase text-white letter-spacing-2"
-                onClick={() => setActivePage('')}>
+                className={activePage === 'technology' ? 'active' : ''}
+                onClick={() => setActivePage('technology')}>
                 <ListItem
                     routeName='technology'
-                    activePage={activePage}
                     counter={counter++}
                 />
             </Link>
