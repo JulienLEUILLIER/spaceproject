@@ -1,14 +1,14 @@
 import Header from "../Header/Header";
 import Wrapper from "./Global.styles";
-import useImage from '../../hooks/useImage';
+import { BackgroundsProps } from '../../helpers/getBackgrounds';
+
 
 interface GlobalProps {
   routeComponent: JSX.Element;
+  backgrounds: BackgroundsProps;
 }
 
-const Global = ({ routeComponent }: GlobalProps) => {
-
-  const backgrounds = useImage(routeComponent);
+const Global = ({ routeComponent, backgrounds }: GlobalProps) => {
 
   return (
     <Wrapper backgrounds={backgrounds}>

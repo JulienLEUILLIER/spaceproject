@@ -31,7 +31,6 @@ const useImage = (routeComponent: JSX.Element) => {
         for (const view of possibleViews) {
           currentBackgrounds[`${view}`] = (
             await import(
-              /* webpackMode: "lazy" */
               `../components/${routeName}/images/background-${routeName.toLowerCase()}-${view}.jpg`
             )
           ).default;
