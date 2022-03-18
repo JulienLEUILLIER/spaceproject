@@ -19,7 +19,11 @@ export const Wrapper = styled.div`
   }
 `;
 
-export const HamburgerButton = styled.button<{ toggle: boolean }>`
+export const HamburgerButton = styled.button<{
+  toggle: boolean;
+  open: string
+  close: string;
+}>`
   display: none;
   cursor: pointer;
 
@@ -32,8 +36,9 @@ export const HamburgerButton = styled.button<{ toggle: boolean }>`
     background: transparent;
     background-image: ${(props) =>
       props.toggle
-        ? `url('assets/shared/icon-close.svg')`
-        : `url('assets/shared/icon-hamburger.svg')`};
+        ? `url(${props.close})`
+        : `url(${props.open})`
+    };
     background-repeat: no-repeat;
     width: 1.5rem;
     aspect-ratio: 1;
@@ -96,7 +101,7 @@ export const NavigatorWrapper = styled.nav<{ toggle: boolean }>`
   }
 `;
 
-export const Logo = styled.div`
+export const SpaceLogo = styled.div`
   padding-inline-end: clamp(1.5rem, 7vw, 3.5rem);
 
   img {
