@@ -20,10 +20,10 @@ ReactDOM.render(
         element={<Destination backgrounds={backgrounds.destination} />} />
       <Route
         path="/crew"
-        element={<Crew backgrounds={backgrounds.destination} />} />
+        element={<Crew backgrounds={backgrounds.crew} />} />
       <Route
         path="/technology"
-        element={<Technology backgrounds={backgrounds.destination} />} />
+        element={<Technology backgrounds={backgrounds.technology} />} />
     </Routes>
   </BrowserRouter>,
   document.getElementById('root')

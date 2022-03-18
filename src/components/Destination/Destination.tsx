@@ -1,7 +1,7 @@
 import MainContentComponent from '../MainContent/MainContentComponent'
 import PlanetDestination from './PlanetDestination';
 import DestinationText from './DestinationText';
-import Wrapper from '../../Global.styles';
+import Wrapper from '../../styles/Global.styles';
 import Header from '../Header/Header';
 import { BackgroundsProps } from '../../helpers/getBackgrounds';
 

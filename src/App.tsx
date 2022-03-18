@@ -1,7 +1,7 @@
 import { BackgroundsProps } from './helpers/getBackgrounds';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
-import Wrapper from './Global.styles'
+import Wrapper from './styles/Global.styles'
 
 interface AppProps {
   backgrounds: BackgroundsProps;

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { BackgroundsProps } from "./helpers/getBackgrounds";
+import { BackgroundsProps } from "../helpers/getBackgrounds";
 
 const Wrapper = styled.div<{backgrounds: BackgroundsProps}>`
   min-height: 100vh;
