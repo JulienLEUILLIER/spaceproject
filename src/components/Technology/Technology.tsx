@@ -1,8 +1,18 @@
-import React from 'react'
+import MainContentComponent from '../MainContent/MainContentComponent'
+import Wrapper from '../../Global.styles';
+import Header from '../Header/Header';
+import { BackgroundsProps } from '../../helpers/getBackgrounds';
 
-const Technology = () => {
+interface TechnologyProps {
+  backgrounds: BackgroundsProps
+}
+
+const Technology = ({ backgrounds }: TechnologyProps) => {
   return (
-    <div>Technology</div>
+    <Wrapper backgrounds={backgrounds}>
+      <Header />
+      <div>Technology</div>
+    </Wrapper>
   )
 }
 

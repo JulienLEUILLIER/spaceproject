@@ -1,8 +1,23 @@
-import React from 'react'
+import MainContentComponent from '../MainContent/MainContentComponent'
+import PlanetDestination from './PlanetDestination';
+import DestinationText from './DestinationText';
+import Wrapper from '../../Global.styles';
+import Header from '../Header/Header';
+import { BackgroundsProps } from '../../helpers/getBackgrounds';
 
-const Destination = () => {
+interface DestinationProps {
+  backgrounds: BackgroundsProps
+}
+
+const Destination = ({ backgrounds }: DestinationProps) => {
+
+  const destinationData = require('../../data.json').destinations;
+
   return (
-    <div>Destination</div>
+    <Wrapper backgrounds={backgrounds}>
+      <Header />
+      <MainContentComponent leftComponent={<PlanetDestination />} rightComponent={<DestinationText />} className='' /> 
+    </Wrapper>
   )
 }
 
