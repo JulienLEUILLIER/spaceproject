@@ -1,5 +1,5 @@
 import { NavigatorWrapper } from './Header.styles';
-import NavLinkItem from './NavLinkItem';
+import { NavLink } from 'react-router-dom';
 
 export type MainSection = '' | 'home' | 'destination' | 'crew' | 'technology';
 
@@ -9,18 +9,22 @@ interface NavigationProps {
 
 const Navigation = ({ toggle }: NavigationProps) => {
 
-    let counter = 0;
-
+    const routes: MainSection[] = ['', 'destination', 'crew', 'technology']
+    
     return (
         <NavigatorWrapper toggle={toggle}>
             <ul id="primary-navigation" className="underline-indicators">
-                <NavLinkItem routeName={''} counter={counter++} />
+                {routes.map((route, counter) => (
+                    <NavLink
+                        to={`/${route}`}
+                        key={counter}
+                        className={({ isActive }) => isActive ? 'active' : ''}>
+                        <li className='ff-sans-cond uppercase text-white letter-spacing-2'>
+                            <span aria-hidden="true">0{counter}</span>{route === '' ? 'home' : route}
 
-                <NavLinkItem routeName={'destination'} counter={counter++} />
-
-                <NavLinkItem routeName={'crew'} counter={counter++} />
-
-                <NavLinkItem routeName={'technology'} counter={counter++} />
+                        </li>
+                    </NavLink>
+                ))}
             </ul>
         </NavigatorWrapper>
     )
