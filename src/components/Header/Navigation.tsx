@@ -1,7 +1,5 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom'
 import { NavigatorWrapper } from './Header.styles';
-import ListItem from './ListItem';
+import NavLinkItem from './NavLinkItem';
 
 export type MainSection = '' | 'home' | 'destination' | 'crew' | 'technology';
 
@@ -11,52 +9,18 @@ interface NavigationProps {
 
 const Navigation = ({ toggle }: NavigationProps) => {
 
-    const [activePage, setActivePage] = useState<MainSection>('');
-
     let counter = 0;
 
     return (
         <NavigatorWrapper toggle={toggle}>
             <ul id="primary-navigation" className="underline-indicators">
-            <Link
-                to={`/`}
-                className={activePage === '' ? 'active' : ''}
-                onClick={() => setActivePage('')}>
-                <ListItem
-                    routeName=''
-                    counter={counter++}
-                />
-            </Link>
+                <NavLinkItem routeName={''} counter={counter++} />
 
-            <Link
-                to={`/destination`}
-                className={activePage === 'destination' ? 'active' : ''}
-                onClick={() => setActivePage('destination')}>
-                <ListItem
-                    routeName='destination'
-                    counter={counter++}
-                />
-            </Link>
+                <NavLinkItem routeName={'destination'} counter={counter++} />
 
-            <Link
-                to={`/crew`}
-                className={activePage === 'crew' ? 'active' : ''}
-                onClick={() => setActivePage('crew')}>
-                <ListItem
-                    routeName='crew'
-                    counter={counter++}
-                />
-            </Link>
+                <NavLinkItem routeName={'crew'} counter={counter++} />
 
-            <Link
-                to={`/technology`}
-                className={activePage === 'technology' ? 'active' : ''}
-                onClick={() => setActivePage('technology')}>
-                <ListItem
-                    routeName='technology'
-                    counter={counter++}
-                />
-            </Link>
+                <NavLinkItem routeName={'technology'} counter={counter++} />
             </ul>
         </NavigatorWrapper>
     )
