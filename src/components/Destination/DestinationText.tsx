@@ -1,8 +1,10 @@
-import React from 'react'
+import PlanetMenuItem from './PlanetMenuItem'
 
-const DestinationText = () => {
+const DestinationText = ({ planets }: { planets: string[] }) => {
   return (
-    <div>DestinationText</div>
+    <div className='tabs-navigation underline-indicators flex'>
+      {planets.map((planet, index) => <PlanetMenuItem key={index} planet={planet} />)}
+    </div>
   )
 }
 

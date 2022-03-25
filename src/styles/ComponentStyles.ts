@@ -59,7 +59,7 @@ const ComponentStyles = css`
   }
 
   .underline-indicators {
-    > a {
+    > * {
       cursor: pointer;
       position: relative;
       padding: var(--underline-gap, 1rem) 0;

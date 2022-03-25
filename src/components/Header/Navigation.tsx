@@ -10,7 +10,7 @@ interface NavigationProps {
 const Navigation = ({ toggle }: NavigationProps) => {
 
     const routes: MainSection[] = ['', 'destination', 'crew', 'technology']
-    
+
     return (
         <NavigatorWrapper toggle={toggle}>
             <ul id="primary-navigation" className="underline-indicators">
@@ -21,7 +21,6 @@ const Navigation = ({ toggle }: NavigationProps) => {
                         className={({ isActive }) => isActive ? 'active' : ''}>
                         <li className='ff-sans-cond uppercase text-white letter-spacing-2'>
                             <span aria-hidden="true">0{counter}</span>{route === '' ? 'home' : route}
-
                         </li>
                     </NavLink>
                 ))}

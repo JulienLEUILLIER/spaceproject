@@ -13,10 +13,12 @@ const Destination = ({ backgrounds }: DestinationProps) => {
 
   const destinationData = require('../../data.json').destinations;
 
+  const planets = Object.keys(destinationData);
+  
   return (
     <Wrapper backgrounds={backgrounds}>
       <Header />
-      <MainContentComponent leftComponent={<PlanetDestination />} rightComponent={<DestinationText />} className='' /> 
+      <MainContentComponent leftComponent={<PlanetDestination />} rightComponent={<DestinationText planets={planets} />} className='' /> 
     </Wrapper>
   )
 }
